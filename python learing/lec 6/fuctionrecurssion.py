@@ -147,12 +147,39 @@ show(n)
 #code of factorial using recursion
 
 def fact(n):
-    if n==0 or n==1:
-        return 1
+    if n==0:
+        return 0
     else:
         return n*fact(n-1)
     
 print(fact(6))
+
+#practice question
+#q1 Write a recursive function to calculate the sum of first n natural numbers.
+#sol1>
+n = int(input("Enter a number: "))
+def sumn(n):
+    if (n == 0):
+        return 0
+    else:
+        return n + sumn(n - 1)
+
+
+print(sumn(n))
+
+#Q2 Write a recursive function to print all elements in a list.
+# Hint : use list & index as parameters.
+
+list=[1,2,4,6]
+i=len(list)
+def lp(list,i):
+    if i==len(list):
+        return 
+    else:
+        print(list[i])
+        return lp(list,i+1)
+
+print(lp(list,0))
 
 
 
